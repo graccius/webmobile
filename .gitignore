@@ -1,13 +1,6 @@
 # Ignora o arquivo .env
 .env
 
-# Ignora arquivos de migração
-**/migrations/
-
-# Ignora diretórios do Python
-*.pyc
-__pycache__/
-
 # Ignora arquivos do ambiente virtual
 venv/
 env/
