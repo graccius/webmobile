@@ -1,0 +1,42 @@
+/* Estilos específicos para a página inicial */
+.container {
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 0; /* Remover qualquer margem superior para evitar conflito com navbar fixa */
+    min-height: calc(100vh - 200px); /* Garante que a altura mínima da tela seja 100% da visualização */
+}
+
+.card {
+    border: 1px solid #dee2e6; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Cor de fundo do card */
+}
+
+/* Imagem do card */
+.card-img-top {
+    border-radius: 5px 5px 0 0; /* Bordas arredondadas na parte superior */
+    object-fit: cover; /* Ajusta o tamanho da imagem */
+}
+
+/* Texto do card */
+.card-text {
+    font-size: 14px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Expande o card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao card */
+}
+
+.card a {
+    color: inherit; /* Mantém a cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.card a:hover {
+    color: inherit; /* Mantém a cor do texto no hover */
+}

@@ -1,0 +1,26 @@
+<!-- templates/profile.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Painel do Usuário</h1>
+<p>Bem-vindo, {{ object.username }}!</p>  <!-- Use 'object' para referenciar o usuário do queryset -->
+
+{% if object.post.all %}
+    <ul>
+    {% for post in object.post.all %}
+        <li>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.subscription }}</p>
+            <p>Autor: {{ post.author.username }}</p>
+            {% if post.photo_post %}
+                <img src="{{ post.photo_post.url }}" alt="{{ post.title }}" style="max-width:500px;">
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Este usuário ainda não tem posts.</p>
+{% endif %}
+
+<!-- Aqui você pode adicionar mais informações sobre o usuário ou links para outras funcionalidades -->
+{% endblock %}
