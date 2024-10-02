@@ -1,5 +1,4 @@
-# Ignora o arquivo .env
-.env
+
 
 # Ignora arquivos do ambiente virtual
 venv/

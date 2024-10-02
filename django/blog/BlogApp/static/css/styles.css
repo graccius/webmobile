@@ -1,52 +1,78 @@
-/* css/styles.css */
-
+/* Estilos gerais */
 body {
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Cor de fundo leve */
+    color: #212529; /* Texto escuro */
+    margin: 0;
+    padding: 0;
 }
 
-.login-container {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 450px;
-    width: 100%;
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
 }
 
-.form-label {
-    font-weight: 600;
-    color: #555;
+/* Títulos */
+h1, h5 {
+    color: #343a40; /* Cor de título */
 }
 
+/* Cards */
+.card {
+    transition: transform 0.2s; /* Efeito de transição */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Aumenta o tamanho do card ao passar o mouse */
+}
+
+/* Botões */
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    border-radius: 25px;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
+    background-color: #007bff; /* Cor personalizada */
+    border: none; /* Remove bordas */
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #0056b3; /* Cor ao passar o mouse */
 }
 
-.form-control {
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 1px solid #ced4da;
-    transition: all 0.3s ease;
+/* Container */
+.container {
+    max-width: 1200px; /* Largura máxima do container */
 }
 
-.form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+
+.navbar-toggler {
+    width: 60px; /* Ajuste conforme necessário */
+    height: 60px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Remova a cor de fundo */
+    border: none; /* Remove a borda */
+    position: relative; /* Para posicionar a imagem */
+    overflow: hidden; /* Para ocultar qualquer parte da imagem que exceda o botão */
 }
+
+.navbar-toggler::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('media/img/google.png'); /* Insira o caminho da sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir o botão */
+    background-position: center; /* Centraliza a imagem */
+    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+    z-index: 1; /* Coloca a imagem atrás do SVG */
+}
+
+.navbar-toggler svg {
+    width: 24px; /* Ajuste conforme necessário */
+    height: 24px; /* Ajuste conforme necessário */
+    color: #ffffff; /* Cor do SVG */
+    z-index: 2; /* Coloca o SVG acima da imagem */
+}
+
+
